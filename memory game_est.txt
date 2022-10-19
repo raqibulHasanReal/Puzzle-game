@@ -1,0 +1,18 @@
+Memory game
+
+Initiate project  10min
+Project skeleton  4h
+Select type of dimension 1h
+Counter 2h
+Timer 2h
+Reset 30min
+Dynamic card generate by users dymension select 4h
+Shuffle card after reset 30min
+Match 2h
+Unmatch  2h
+ Finish game modal open with score  4h
+
+ // user input 
+ create modal 1h
+ user functional 1h
+

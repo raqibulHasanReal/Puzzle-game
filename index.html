@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2>Memory Game</h2>
+        </div>
+
+        <!-- header -->
+        <div class="header">
+            <div id="counter"> 0 move(s)</div>
+            <div id="success"></div>
+            <div id="time"></div>
+            <div> 
+                <label for="cardDymension">Choose a dymention:</label>
+                <select name="cardDymension" id="cardDymension" form="carform" onchange="setDymension()">
+                    <option value="twoByTwo"> 2 x 2</option>
+                    <option value="fourByFour">4 X 4</option>
+                </select>
+            </div>
+            <div class="reset" onclick=resetGame()><i class="fa fa-repeat"></i></div>
+            <div><button class="logout" onclick=logOut()>logout</button></div>
+        </div>
+
+        <!-- cards -->
+        <ul><div class="card-list" id="card"></div></ul>
+
+        <!-- Modal -->
+        <div id="modal" class="overlay">
+            <div class="popup">
+                <a class="close" href=# onclick="playAgain()">×</a>
+                <div class="content-1">
+                    Congratulations <span id="yourName"></span> you're a winner
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=totalCounter> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                </div>
+                <button id="play-again" onclick="playAgain()">
+                    Play again
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal user input -->
+        <div id="inputModal" class="overlay">
+            <div class="popup">
+                <div class="content-1">
+                    <h2>Mamory game</h2>
+                </div>
+                <div class="content-2">
+                    <div class="user-name">
+                        <input placeholder="Your Name" id="userName" type="text">
+                    </div>
+                    <div class="user-email">
+                        <input placeholder="Your Email" id="userEmail" type="mail">
+                    </div>
+                </div>
+                <button id="play-again" onclick="saveUserInput()">Lets play</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
